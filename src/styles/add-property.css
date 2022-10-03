@@ -1,3 +1,12 @@
 .add-property {
   padding: 5px;
 }
+
+add-property-form {
+  display: flex;
+  flex-direction: column;
+}
+
+add-property-label {
+
+}
