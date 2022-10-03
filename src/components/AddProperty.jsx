@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/add-property.css";
 
 const AddProperty = () => {
   const initialState = {
@@ -26,11 +27,11 @@ const AddProperty = () => {
 
   return (
     <div className="add-property">
-      <div>Add Property Page</div>
       <form className="add-property-form" onSubmit={handleAddProperty}>
-        <label htmlFor="title">
+        <label className="add-property-label" htmlFor="title">
           Title
           <input
+            className="add-property-input"
             id="title"
             name="title"
             value={fields.title}
@@ -42,6 +43,7 @@ const AddProperty = () => {
         <label htmlFor="city">
           City
           <select
+            className="add-property-select"
             id="city"
             name="city"
             value={fields.city}
@@ -56,41 +58,47 @@ const AddProperty = () => {
         <label htmlFor="bedrooms">
           Bedrooms
           <input
+            className="add-property-input"
             id="bedrooms"
             name="bedrooms"
             value={fields.bedrooms}
             onChange={handleFieldChange}
-            placeholder="2"
+            placeholder="0"
             type="number"
+            min="0"
           />
         </label>
         <label htmlFor="bathrooms">
           Bathrooms
           <input
+            className="add-property-input"
             id="bathrooms"
             name="bathrooms"
             value={fields.bathrooms}
             onChange={handleFieldChange}
-            placeholder="1"
+            placeholder="0"
             type="number"
+            min="0"
           />
         </label>
         <label htmlFor="price">
           Price
-          <span>£</span>
+          <span className="add-property-price-span">£</span>
           <input
+            className="add-property-input"
             id="price"
             name="price"
             value={fields.price}
             onChange={handleFieldChange}
-            placeholder="100,000.00"
-            min="0.01"
-            step="0.01"
+            placeholder="100,000"
+            min="0.00"
+            step="500"
           />
         </label>
         <label htmlFor="email">
           Email
           <input
+            className="add-property-input"
             id="email"
             name="email"
             value={fields.email}
@@ -102,6 +110,7 @@ const AddProperty = () => {
         <label htmlFor="type">
           Type
           <select
+            className="add-property-select"
             id="type"
             name="type"
             value={fields.type}
@@ -117,7 +126,9 @@ const AddProperty = () => {
           </select>
         </label>
 
-        <button type="submit">Add</button>
+        <button className="add-property-button" type="submit">
+          Add
+        </button>
       </form>
     </div>
   );

@@ -2,11 +2,34 @@
   padding: 5px;
 }
 
-add-property-form {
-  display: flex;
-  flex-direction: column;
+.add-property-form {
+  display: grid;
 }
 
-add-property-label {
+.add-property-input {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
+.add-property-select {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.add-property-button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 160px;
+}
+
+.add-property-price-span {
+  padding-left: 10px;
+  margin-right: -5px;
 }
