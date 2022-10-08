@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/add-property.css";
+import postProperty from "../requests/postProperty";
 
 const AddProperty = () => {
   const initialState = {
@@ -18,7 +19,7 @@ const AddProperty = () => {
 
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
+    postProperty(fields);
   };
 
   const handleFieldChange = (event) => {
@@ -90,7 +91,7 @@ const AddProperty = () => {
             name="price"
             value={fields.price}
             onChange={handleFieldChange}
-            placeholder="100,000"
+            placeholder="100000"
             min="0.00"
             step="500"
           />
