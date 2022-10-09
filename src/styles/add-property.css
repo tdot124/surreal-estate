@@ -3,7 +3,13 @@
 }
 
 .add-property-form {
+  padding: 10px;
   display: grid;
+  background-color: white;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;  
 }
 
 .add-property-input {
@@ -27,6 +33,10 @@
   margin: 10px;
   border-radius: 10px;
   width: 160px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: rgb(78, 5, 78);
 }
 
 .add-property-price-span {
