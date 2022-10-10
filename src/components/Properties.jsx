@@ -1,18 +1,47 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import PropertyCard from "./PropertyCard";
+import Alert from "./Alert";
+import SideBar from "./SideBar";
+import "../styles/properties.css";
 
 const Properties = () => {
-  const validProps = {
-    title: "3 Bed House with a view",
-    type: "Detached",
-    bathrooms: 2,
-    bedrooms: 3,
-    price: 450000,
-    city: "Liverpool",
-    email: "test@email.com",
+  const initialState = {
+    properties: [],
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
 
-  return <PropertyCard {...validProps} />;
+  const [properties, setProperties] = useState(initialState.properties);
+  const [alert, setAlert] = useState(initialState.alert);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/v1/PropertyListing")
+      .then((response) => {
+        setProperties(response.data);
+      })
+      .catch(() => {
+        setAlert({
+          message: "Server Error. Please try again later.",
+          isSuccess: false,
+        });
+      });
+  }, []);
+
+  return (
+    <div className="properties">
+      <SideBar />
+      <Alert message={alert.message} success={alert.isSuccess} />
+      {properties.map((property) => (
+        <div className="property-card">
+          <PropertyCard key={property._id} {...property} />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Properties;
