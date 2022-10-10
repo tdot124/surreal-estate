@@ -6,8 +6,8 @@
   },
   "extends": [
       "plugin:react/recommended",
-      "plugin:prettier/recommended",
-      "airbnb"
+      "airbnb",
+      "plugin:prettier/recommended"
   ],
   "globals": {
       "Atomics": "readonly",
@@ -24,7 +24,6 @@
       "react"
   ],
   "rules": {
-    "comma-dangle": ["error", "ignore"],
     "quotes": [0],
     "no-underscore-dangle": [0],
     "react/jsx-props-no-spreading": [0],
