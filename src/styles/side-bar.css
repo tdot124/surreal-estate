@@ -2,8 +2,21 @@
   border-right: 5px solid black;
   background-color: white;
   padding: 10px;
+}
+
+.sidebar-search{
   display: flex;
   flex-direction: column;
+}
+
+.sidebar-sort{
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header{
+  padding-top: 20px;
+  margin-bottom: 0px;
 }
 
 .sidebar-link{
