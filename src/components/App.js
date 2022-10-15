@@ -6,9 +6,13 @@ import Properties from "./Properties";
 import AddProperty from "./AddProperty";
 
 const App = () => {
+  const handleLogin = (response) => {
+    console.log(response);
+  };
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar onLogin={handleLogin} />
       <Routes>
         <Route path="/" element={<Properties />} />
         <Route path="/add-property" element={<AddProperty />} />

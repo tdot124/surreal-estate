@@ -2,6 +2,7 @@
   border-right: 5px solid black;
   background-color: white;
   padding: 10px;
+  height: 100%;
 }
 
 .sidebar-search{
@@ -15,6 +16,7 @@
 }
 
 .sidebar-header{
+  font-size: 1.1vw;
   padding-top: 20px;
   margin-bottom: 0px;
 }
@@ -22,6 +24,13 @@
 .sidebar-link{
   text-decoration: none;
   color: rgb(78, 5, 78);
-  font-size: 17px;
+  font-size: 1vw;
   margin-top: 10px;
+}
+
+.sidebar-form{
+  width: 8vw;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
